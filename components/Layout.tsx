@@ -12,18 +12,18 @@ export const Layout: VFC<Props> = ({
   title = 'Welcome to Nextjs',
 }) => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen text-gray-600 text-sm font-mono">
+    <div className="flex flex-col items-center justify-center min-h-screen font-mono text-sm text-gray-600">
       <Head>
         <title>{title}</title>
       </Head>
       <header>
-        <nav className="bg-gray-800 w-screen">
+        <nav className="w-screen bg-gray-800">
           <div className="flex items-center pl-8 h-14">
             <div className="flex space-x-4">
               <Link href="/">
                 <a
                   data-testid="home-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+                  className="px-3 py-2 text-gray-300 rounded hover:bg-gray-700"
                 >
                   Home
                 </a>
@@ -31,7 +31,7 @@ export const Layout: VFC<Props> = ({
               <Link href="/local-state-a">
                 <a
                   data-testid="makevar-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+                  className="px-3 py-2 text-gray-300 rounded hover:bg-gray-700"
                 >
                   makeVar
                 </a>
@@ -39,7 +39,7 @@ export const Layout: VFC<Props> = ({
               <Link href="/hasura-main">
                 <a
                   data-testid="fetchpolicy-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+                  className="px-3 py-2 text-gray-300 rounded hover:bg-gray-700"
                 >
                   fetchPolicy(Hasura)
                 </a>
@@ -47,7 +47,7 @@ export const Layout: VFC<Props> = ({
               <Link href="/hasura-crud">
                 <a
                   data-testid="crud-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+                  className="px-3 py-2 text-gray-300 rounded hover:bg-gray-700"
                 >
                   CRUD(Hasura)
                 </a>
@@ -55,7 +55,7 @@ export const Layout: VFC<Props> = ({
               <Link href="/hasura-ssg">
                 <a
                   data-testid="ssg-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+                  className="px-3 py-2 text-gray-300 rounded hover:bg-gray-700"
                 >
                   SSG+ISR(Hasura)
                 </a>
@@ -63,7 +63,7 @@ export const Layout: VFC<Props> = ({
               <Link href="/hooks-memo">
                 <a
                   data-testid="memo-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+                  className="px-3 py-2 text-gray-300 rounded hover:bg-gray-700"
                 >
                   custom hook + memo
                 </a>
@@ -72,10 +72,10 @@ export const Layout: VFC<Props> = ({
           </div>
         </nav>
       </header>
-      <main className="flex flex-1 flex-col justify-center items-center w-screen">
+      <main className="flex flex-col items-center justify-center flex-1 w-screen">
         {children}
       </main>
-      <footer className="w-full h-12 flex justify-center items-center border-t">
+      <footer className="flex items-center justify-center w-full h-12 border-t">
         <a
           className="flex items-center"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
